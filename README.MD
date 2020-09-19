@@ -7,7 +7,7 @@ N-size Sudoku is a game with a square table of N2 width and height divided into 
 
 Given a number N on the first line and a full sudoku table on the next N2 lines. Every line contains N2 integers.
 
-Your task is to determine whether this sudoku is solved or not. Output "YES" if this sudoku table is solved, otherwise "NO".
+Your task is to determine whether this sudoku is solved or not. Output `YES` if this sudoku table is solved, otherwise `NO`.
 
 N can be from 1 to 10.
 ## Examples
