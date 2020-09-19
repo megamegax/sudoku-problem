@@ -27,6 +27,7 @@ Sample Input 1:
 2 5 1 7 3 6 4 8 9
 ```
 Sample Output 1:
+
 `YES`
 
 Sample Input 2:
