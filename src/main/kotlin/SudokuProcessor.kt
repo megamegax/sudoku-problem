@@ -43,8 +43,8 @@ fun Array<IntArray>.getColumn(n: Int): IntArray {
 fun Array<IntArray>.getSquare(n: Int, size: Size): IntArray {
     val square = mutableListOf<Int>()
     var squareIndex = 0
-    for (squareIndexRow in 0 until size.width * size.height step size.width) {
-        for (squareIndexColumn in 0 until size.width * size.height step size.width) {
+    for (squareIndexRow in 0 until size.size step size.width) {
+        for (squareIndexColumn in 0 until size.size step size.width) {
             if (squareIndex == n) {
                 for (rowIndex in 0 until size.width) {
                     for (columnIndex in 0 until size.height) {

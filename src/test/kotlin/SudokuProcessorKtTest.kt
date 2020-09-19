@@ -43,7 +43,11 @@ internal class SudokuProcessorKtTest : DescribeSpec({
     }
     describe("getSquare(0)") {
         it("should return 1,2,3,4,5,6,7,8,9 when matrix is 123,456,789") {
-            val matrix = arrayOf(intArrayOf(1, 2, 3), intArrayOf(4, 5, 6), intArrayOf(7, 8, 9))
+            val matrix = arrayOf(
+                intArrayOf(1, 2, 3),
+                intArrayOf(4, 5, 6),
+                intArrayOf(7, 8, 9)
+            )
 
             matrix.getSquare(0, Size(3)) shouldBe intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
         }
