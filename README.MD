@@ -1,4 +1,7 @@
 # Sudoku problem
+
+[![Actions Status](https://github.com/{owner}/{repo}/workflows/{workflow_name}/badge.svg)](https://github.com/{owner}/{repo}/actions)
+
 ## Description
 N-size Sudoku is a game with a square table of N2 width and height divided into N2 smaller squares of N width and height. In a solved state, each of these smaller squares, as well as each row and column of a full square, contains all numbers from 1 to N2 without repetition.
 
