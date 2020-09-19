@@ -1,28 +1,14 @@
-import io.kotest.data.row
-
 class SudokuProcessor {
     fun process(board: Array<IntArray>, size: Size): Boolean {
-        var rowResult = true
-        var columnResult = true
-        var squareResult = true
-        for (i in 0 until size.width) {
-            if (board.getRow(i).toMutableList().groupingBy { it }.eachCount().filter { it.value > 1 }.isNotEmpty()) {
-                rowResult = false
-            }
-            if (board.getColumn(i).toMutableList().groupingBy { it }.eachCount().filter { it.value > 1 }.isNotEmpty()) {
-                columnResult = false
-            }
-            if (board.getSquare(i, size).toMutableList().groupingBy { it }.eachCount()
-                    .filter { it.value > 1 }.isNotEmpty()
-            ) {
-                squareResult = false
-            }
-        }
+        return !(0 until size.width).map {
+            (board.getRow(it).solve() && board.getColumn(it).solve() && board.getSquare(it, size).solve())
+        }.any { !it }
+    }
 
-        return rowResult && columnResult && squareResult
+    private fun IntArray.solve(): Boolean {
+        return this.toMutableList().groupingBy { it }.eachCount().filter { it.value > 1 }.isEmpty()
     }
 }
-
 
 fun Array<IntArray>.getRow(n: Int): IntArray {
     return this[n]
